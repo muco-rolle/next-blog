@@ -1,0 +1,26 @@
+{
+    "presets": [["next/babel"]],
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "alias": {
+                    "@front-office-pages": "./src/app/front-office",
+                    "@back-office-pages": "./src/app/back-office",
+                    "@components": "./src/components",
+                    "@redux": "./src/redux",
+                    "@utils": "./src/utils",
+                    "@config": "./src/config"
+                }
+            }
+        ]
+    ],
+    "env": {
+        "test": {
+            "presets": [
+                ["@babel/preset-env", { "modules": false }],
+                "next/babel"
+            ]
+        }
+    }
+}
